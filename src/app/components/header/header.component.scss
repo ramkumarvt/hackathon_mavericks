@@ -1,0 +1,199 @@
+.headerBackground {
+  --background: var(--app-primary-color) !important;
+  background: var(--app-primary-color) !important;
+}
+p {
+  margin: 0px;
+}
+.logoSize {
+  width: 70px;
+}
+.set-padding {
+  margin: 0 0 0 10px;
+}
+.syncIcon {
+    fill: var(--app-secondary-color);
+    width: 24px;
+}
+.logoCol {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.profile-grid {
+  padding: 0 5px;
+}
+.profileCol {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.profile-col {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+.labelName {
+  font-size: var(--app-heading3-font-size);
+  color: var(--app-tertiary-color);
+}
+.move-end {
+  justify-content: flex-end;
+}
+//employeeInformation
+.rightArrow {
+  width: 25px;
+  fill: var(--app-primary-color-scheme);
+  stroke: var(--app-primary-color-scheme);
+}
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.employeeName {
+  font-size: var(--app-heading3-font-size);
+  color: var(--app-primary-color-scheme);
+  margin-bottom: 0px;
+}
+.employeeId {
+  font-size: var(--app-heading3-font-size);
+  color: var(--app-tertiary-color);
+}
+.autoSave {
+  font-size: var(--app-heading4-font-size);
+  color: var(--app-quaternary-color);
+  margin-bottom: 0px;
+}
+.autoSaveTime {
+  font-size: var(--app-heading4-font-size);
+  color: var(--app-tertiary-color);
+  padding:2px;
+}
+.autosave-label{
+  text-align: right;
+}
+.add-vertical-line{
+padding:0 5px;
+border-left:1px solid rgba(var(--app-primary-color-rgb),0.5);
+}
+ion-item {
+  --inner-padding-bottom: 0px !important;
+  --inner-padding-end: 0px !important;
+  --inner-padding-start: 0px !important;
+  --inner-padding-top: 0px !important;
+  --background: none;
+}
+ion-item::part(native) {
+  padding: 0px !important;
+}
+
+.badge-col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 10px;
+  padding-top: 7px;
+}
+
+.notification {
+  position: relative;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  line-height: 22px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--app-danger-color);
+  color: var(--app-secondary-color);
+  text-align: center;
+  font-size: var(--app-heading4-font-size);
+}
+
+//geolocation
+.geoArrow {
+  width: 15px;
+  fill: var(--app-primary-color-scheme);
+  stroke: var(--app-primary-color-scheme);
+}
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ion-toolbar{
+  --padding-top: 0px !important;
+    --padding-start: 0px !important;
+    --padding-right: 0px !important;
+    --padding-end: 0px !important;
+
+    ion-buttons {
+      color: var(--app-secondary-color);
+    }
+}
+
+.geo-location-grid {
+  background-color: var(--app-quinary-color);
+  border-bottom: 0.5px solid var(--app-senary-color);
+}
+
+.geolocationIcon {
+  width: 22px;
+  fill: var(--app-primary-color-scheme);
+  stroke: var(--app-primary-color-scheme);
+}
+.customer-text-color {
+  color: var(--app-secondary-color);
+  margin: 0 10px;
+  border:0px solid var(--app-secondary-color);
+}
+.m-3 {
+margin: 6px 0;
+}
+
+.logout {
+  color: var(--app-secondary-color);
+  margin-right: 7px;
+}
+.logout-icon {
+  color: var(--app-secondary-color);
+  font-size: 25px;
+  margin-right: 4px;
+}
+
+.sync-col {
+  padding: 5px 0px;
+}
+
+ion-menu-button::part(native) {
+  padding-right: 0;
+  margin-left: 3px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 8px;
+  color: var(--app-secondary-color);;
+}
+
+.icon-profile {
+  border-radius: 50%;
+  background-color: var(--app-secondary-color);
+  text-align: center;
+  margin-right: 10px;
+  line-height: 2.2;
+}
+
+ion-avatar {
+  height: 25px;
+  width: 25px;
+}
+

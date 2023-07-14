@@ -1,0 +1,98 @@
+.button-solid.ion-activatable {
+  --box-shadow: none !important;
+}
+.button-solid {
+  --box-shadow: none !important;
+}
+
+.button {
+  --border-radius: 2.5px;
+  transition: background 0.8s;
+  height: 40px;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  border-color: transparent;
+  text-transform: none;
+}
+
+.is-large {
+  @extend .button;
+  font-family: var(--app-semi-bold-font);
+  font-size: var(--app-heading2-font-size);
+}
+.ion-activatable {
+  --background-activated: rgba(var(--app-primary-color), 0.1) !important;
+  --background-focused: rgba(var(--app-primary-color), 0.1) !important;
+  --background-activated-opacity: 1 !important;
+}
+.is-medium {
+  @extend .button;
+  font-family: var(--app-semi-bold-font);
+  font-size: var(--app-heading2-font-size);
+}
+
+.is-small {
+  @extend .button;
+  font-family: var(--app-semi-bold-font);
+  font-size: var(--app-heading2-font-size);
+}
+
+.is-primary {
+  @extend .button;
+  --color: var(--app-secondary-color)!important;
+  --background: var(--app-primary-color);
+  --ripple-color: rgba(var(--app-secondary-color), 0.1);
+}
+
+.is-secondary {
+  @extend .button;
+  --color: var(--app-primary-color);
+  --background: var(--app-secondary-color);
+  --ripple-color: rgba(var(--app-primary-color), 0.1);
+
+  &.is-large {
+    --border-width: 2px;
+    --border-style: solid;
+    --border-color: var(--app-primary-color);
+  }
+
+  &.is-medium {
+    --border-width: 2px;
+    --border-style: solid;
+    --border-color: var(--app-primary-color);
+  }
+
+  &.is-small {
+    --border-width: 2px;
+    --border-style: solid;
+    --border-color: var(--app-primary-color);
+  }
+}
+
+.is-borderless {
+  --background: transparent !important;
+  --color: var(--app-quaternary-color) !important;
+  cursor: pointer;
+  font-family: var(--app-semi-bold-font);
+  font-size: var(--app-heading2-font-size);
+}
+
+.is-primary::part(native) {
+  --color: var(--app-secondary-color) !important;
+  --background: var(--app-primary-color) !important;
+}
+.is-secondary::part(native) {
+  color: var(--app-primary-color) !important;
+  --color: var(--app-primary-color) !important;
+  --background: var(--app-secondary-color) !important;
+  background: var(--app-secondary-color) !important;
+}
+.is-borderless::part(native) {
+  --background: transparent !important;
+  --color: var(--app-quaternary-color) !important;
+}
+ion-button::part(native) {
+  --color: var(--app-secondary-color) !important;
+}

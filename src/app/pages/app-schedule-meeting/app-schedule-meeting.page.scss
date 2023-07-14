@@ -1,0 +1,61 @@
+ion-content {
+    --background: var(--app-quinary-color) !important;
+    height: 100%;
+}
+
+.schedule-meeting-grid {
+    padding: 10px 15px;
+    height: 100%;
+    overflow: auto;
+}
+
+ion-card {
+    margin: 10px 0px;
+    // min-height: 50px;
+
+    div {
+       @extend .min-height;
+    }
+
+    .active {
+        background-color: var(--app-primary-color) !important;
+
+        ion-text {
+            color: var(--app-secondary-color);
+        }
+    }
+
+   .card-title {
+        color: var(--app-primary-color);
+   }
+}
+
+.min-height {
+    min-height: 50px;
+}
+
+.border-top {
+    border-top: solid 1px #d8d8d8;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.column-rrom-selected {
+    border: solid 1px #d8d8d8;
+    border-radius: 5px;
+    height: 35px;
+    padding: 10px;
+
+    ion-text {
+        height: 30px;
+    }
+}
+
+.date {
+    width: 100px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 5px;
+}

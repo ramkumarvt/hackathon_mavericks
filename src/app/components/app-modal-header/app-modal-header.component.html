@@ -1,0 +1,17 @@
+<ion-header mode="md">
+<ion-toolbar>
+    <ion-buttons class="margin-r-3" slot="start" *ngIf="showLeftIcon"  tabindex="0" aria-label="go to previous">
+      <ion-button (click)="uiClosePopup()">
+        <ion-icon name="chevron-back-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  
+    <ion-buttons slot="end" class="move-right mr-4" *ngIf="!showLeftIcon"  aria-label="close popup">
+      <ion-button (click)="uiClosePopup()">
+        <ion-icon name="close-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  
+    <ion-label [class.label]="showLeftIcon" class="popup-title title-font"><span tabindex="0" role="heading" id="alert_header_title">{{ header }}</span></ion-label>
+  </ion-toolbar>
+</ion-header>

@@ -2,7 +2,61 @@
 // http://ionicframework.com/docs/theming/
 
 /** Ionic CSS Variables **/
+
+body {
+  --app-primary-color: #0076a8 ;
+  --app-primary-color-rgb: var(--app-primary-color-rgb-scheme);
+  --app-secondary-color: #ffffff; // card background color
+  --app-tertiary-color: #5e5e5e; // Description font color
+  --app-senary-color: '#dbdbdb'; // border color
+}
 :root {
+  --app-regular-font: "Poppins Regular";
+  --app-medium-font: "Poppins Medium";
+  --app-bold-font: "Poppins Bold";
+  --app-semi-bold-font: "Poppins SemiBold";
+
+  --app-title-font-size: 20px;
+  --app-heading1-font-size: 18px;
+  --app-heading2-font-size: 16px;
+  --app-heading3-font-size: 14px;
+  --app-heading4-font-size: 12px;
+  --app-heading5-font-size: 10px;
+
+  --app-primary-color: #0076a8 ;
+  --app-primary-color-rgb: var(--app-primary-color-rgb-scheme);
+  --app-secondary-color: #ffffff; // card background color
+  --app-tertiary-color: #5e5e5e; // Description font color
+  --app-light-tertiary-clr: var(--app-light-tertiary-clr); // Light text color
+  --app-light-font-clr: var(--app-light-font-clr); // Label font color
+  --app-tertiary-color-rgb: #{hexToRGB(var(--app-tertiary-clr))}; // Description font color
+  --app-quaternary-color: '#757575'; // placeholder font color
+  --app-quinary-color: #f1f5f6; // background color
+  --app-senary-color: '#dbdbdb'; // border color
+  --app-icon-color: var(--app-icon-clr); //icon color
+  --app-octal-color: var(--app-octal-clr); // hyper link color
+
+  --app-success-color: var(--app-success-clr);
+  --app-danger-color: var(--app-danger-clr);
+  --app-corrected-color: var(--app-corrected-clr);
+  --app-na-color: var(--app-na-clr);
+  --app-flag-color: var(--app-flag-clr);
+  --app-ada-focus-color: var(--app-ada-focus-color); //ada focus color
+
+  //login class css
+  --app-login-content-primary-color: var(--app-login-content-primary-clr);
+  --app-login-continue-color: var(--app-login-continue-clr);
+  --app-login-signin-text-color: var(--app-login-signin-text-clr);
+  --app-login-footer-bg-color: var(--app-login-footer-bg-clr);
+  --app-login-footer-text-color: var(--app-login-footer-text-clr);
+
+  --ion-toolbar-background: var(--ion-toolbar-background-clr);
+  --app-comment-background-color: var(--ion-comment-background-clr);
+
+  // FOR MARGIN AND PADDING
+  --size-small: var(--app-heading5-font-size);
+  // --size-medium: 2rem;
+  // --size-large: 3rem;
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;

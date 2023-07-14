@@ -1,0 +1,21 @@
+.custom-ion-input {
+  font-size: var(--app-heading2-font-size);
+  color: var(--app-quaternary-color);
+  background-color: var(--app-secondary-color);
+  position: relative;
+  --placeholder-color: var(--app-quaternary-color);
+  padding: 0px 10px !important;
+}
+
+.custom-ion-input::shadow input {
+  color: var(--app-quaternary-color);
+}
+
+.custom-ion-label-text {
+  color: var(--app-quaternary-color);
+}
+
+.validation-text {
+  color: var(--app-danger-color);
+  font-size: var(--app-heading3-font-size);
+}

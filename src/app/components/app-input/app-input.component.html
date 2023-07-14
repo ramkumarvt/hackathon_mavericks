@@ -1,0 +1,22 @@
+<ion-label id="inputLabel" *ngIf="label" tabindex="0" role="text" class="custom-ion-label-text text-font" [position]="labelPosition">{{ label }} </ion-label>
+
+<ion-input mode="md"
+  tabindex="0"
+  class="custom-ion-input description-font"
+  [attr.id]="id"
+  [attr.name]="name"
+  [attr.disabled]="disabled"
+  [value]="ngModel"
+  [attr.type]="type"
+  [attr.readOnly]="readOnly"
+  [placeholder]="placeholder"
+  [debounce]="debounce"
+  [inputmode]="type === 'number' ? 'decimal' : 'text'"
+  (input)="inputHandler($event)"
+  (ionBlur)="blurHandler($event)"
+  (ionFocus)="onFocus($event)"
+  (ionInput)="ionInput($event)"
+>
+</ion-input>
+
+<ion-text id="inputErrorMsg" tabindex="0" role="text" class="validation-text text-font">{{ errorText }}</ion-text>
