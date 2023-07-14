@@ -1,0 +1,56 @@
+.select-container {
+  background-color: var(--app-secondary-color);
+  border: 1px solid var(--app-senary-color);
+  border-radius: 5px;
+  // padding: 5px 0;
+}
+.label-text{
+  font-size: var(--app-heading4-font-size);
+  color: var(--app-quaternary-color);
+}
+
+ion-select {
+  padding-left: 10px!important;
+  font-family: var(--app-regular-font); 
+}
+::ng-deep .select-parent-container .select-interface-option {
+  padding-inline-end: 20px !important;
+  ion-label {
+    color: var(--app-tertiary-color) !important;
+    font-family: var(--app-regular-font) !important;
+    font-size: var(--app-heading3-font-size);
+    --padding-start: 10px;
+    --padding-end: 10px;
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --inner-padding-end: 0px;
+    ion-radio {
+      --color-checked: var(--app-primary-color) !important;
+      margin: 0px !important;
+    }
+  }
+
+  ion-radio {
+    margin: 0px !important;
+  }
+
+}
+::ng-deep .select-parent-container .select-interface-option:last-child {
+  --inner-border-width: 0px 0px 0px 0px;
+}
+
+ion-select::part(icon) {
+  opacity: 0.8!important;
+  transform: scale(1.2)!important;
+  right: 5px!important;
+ }
+// ion-select::part(icon) {
+//   color:  var(--app-primary-color) !important;
+//   .select-icon-inner {
+//     left: -5px !important;
+//     margin-top: -6px !important;
+//     border-top: 14px solid !important;
+//     border-right: 10px solid transparent !important;
+//     border-left: 10px solid transparent !important;
+//   }
+// }

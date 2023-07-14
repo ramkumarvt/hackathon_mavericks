@@ -1,0 +1,16 @@
+ion-content {
+    --background: var(--app-quinary-color) !important;
+}
+
+::ng-deep .add-room-footer app-button ion-button {
+    width: 100%;
+}
+
+::ng-deep .room-creation-grid app-input ion-input {
+    border: 1px solid var(--app-senary-color);
+    background-color: var(--app-secondary-color)!important;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: var(--app-heading3-font-size);
+    color: var(--app-tertiary-color);
+}

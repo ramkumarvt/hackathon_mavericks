@@ -1,0 +1,6 @@
+<div class="select-container">
+  <ion-label class="text-font label-text" *ngIf="label">{{ label }}</ion-label> 
+  <ion-select class="tertiary-clr" interface="popover" mode="md" [value]="defaultValue" [interfaceOptions]="customAlertOptions" [multiple]="isMultiSelect" (ionChange)="onValueChange($event)">
+    <ion-select-option *ngFor="let dropboxValue of data" [disabled]="dropboxValue?.disabled" [value]="dropboxValue.value"> {{dropboxValue.label}}</ion-select-option>
+  </ion-select>
+</div>

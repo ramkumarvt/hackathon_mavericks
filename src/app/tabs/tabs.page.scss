@@ -1,1 +1,84 @@
+ion-router-outlet {
+    position: relative;
+    height: 100%;
+}
 
+ion-toolbar {
+    --background: var(--app-primary-color);
+}
+
+selected-tab-text {
+    font-size: var(--app-heading3-font-size);
+    color: var(--app-secondary-color);
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .tab-item {
+    color: var(--app-tertiary-color)
+  }
+  
+  .tab-menu:not(:last-child) {
+    border-bottom: 1px solid rgba(var(--app-tertiary-color-rgb), 0.2) !important;
+  }
+  
+  .tab-item.active {
+    color: var(--app-primary-color) !important;
+    height: 32px;
+  
+    span {
+      color: var(--app-primary-color) !important;
+      font-family: var(--app-semi-bold-font);
+    }
+  }
+  
+  ion-item {
+    --ion-background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --inner-padding-start: 0px;
+  }
+
+.logo {
+    width: 50%;
+    height: 20px;
+}
+
+.v-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu-item {
+    min-height: 48px;
+}
+
+.mar-top{
+    margin-top: 5px;
+} 
+
+.close-menu {
+    color: var(--app-secondary-color);
+    font-size: 25px;
+}
+
+.tab-name {
+    color: var(--app-light-tertiary-clr);
+    font-size: 15px;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  
+.tab-icon {
+    color: var(--app-light-tertiary-clr);
+    width: 15px;
+    height: 18px;
+    margin: 4px 11px 6px 2px;
+    opacity: 0.9;
+    padding: 0px !important;
+}
