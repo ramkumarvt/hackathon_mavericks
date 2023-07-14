@@ -1,0 +1,7 @@
+{
+  "name": "meeting_room_schedule",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
