@@ -19,11 +19,20 @@
     <ion-row>
       <ion-col>
         <div class="set-margin">
+          <ion-label class="text-font header-text input-label" position="stacked">Floor</ion-label>
+          <app-dropdown [data]="dropDownData" (ngDropdownValueChange)="onFloorChange($event)" resetFilter="false" defaultValue="floor1"></app-dropdown>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div class="set-margin">
           <ion-label class="text-font header-text input-label" position="stacked">Maximum Capacity</ion-label>
           <app-input 
-            [(ngModel)]="data.capacity"
+            [(ngModel)]="data.maximumCapacity"
             ngDefaultControl 
-            [type]="'text'"
+            [type]="'input'"
             placeholder="Enter Maximum Capacity"
           ></app-input>
         </div>

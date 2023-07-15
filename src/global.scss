@@ -48,3 +48,29 @@
     align-items: center;
     justify-content: center;
   }
+
+
+  .small-text-font {
+    font-family: var(--app-regular-font);
+    font-size: var(--app-heading4-font-size)!important;
+    color: var(--app-tertiary-clr);
+  }
+  
+  .small-label-font {
+    font-family: var(--app-regular-font);
+    font-size: var(--app-heading4-font-size);
+    color: var(--app-light-font-clr);
+    // font-weight: 400;
+  }
+  
+  .regular-value-font {
+    font-family: var(--app-medium-font);
+    font-size: var(--app-heading3-font-size)!important;
+    color: var(--app-tertiary-clr);
+  }
+  
+  .value-font {
+    font-family: var(--app-regular-font);
+    font-size: var(--app-heading3-font-size)!important;
+    color: var(--app-tertiary-clr);
+  }

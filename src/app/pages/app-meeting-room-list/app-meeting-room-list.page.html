@@ -10,6 +10,36 @@
       <ion-title size="large">app-meeting-room-list</ion-title>
     </ion-toolbar>
   </ion-header> -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <div class="room-list-container" *ngFor="let room of roomLists;">
+            <ion-card class="room-list-card ion-no-margin">
+              <ion-card-content class="ion-no-padding">
+                <ion-grid class="ion-no-padding">
+                  <ion-row class="row-alignment">
+                    <ion-col size="7">
+                      <ion-text tabindex="0" role="text" class="medium-font set-font">{{ room.roomName }}</ion-text>
+                      <!-- <p tabindex="0" role="text" class="small-text-font">{{ room.id }}</p>
+                      <p class="small-text-font">{{ room.floor }}</p> -->
+                    </ion-col>
+                    <!-- <ion-col class="ion-text-center" *ngIf="data.expireIn">
+                      <ion-text class="small-text-font expiring-data"> {{ data.expireIn }} days to go </ion-text>
+                    </ion-col> -->
+                    <ion-col class="col-alignment text" size="5">
+                      <ion-text class="small-label-font">Floor</ion-text>
+                      <p class="regular-value-font">{{ room.floor || '-' }}</p>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
 <ion-footer>

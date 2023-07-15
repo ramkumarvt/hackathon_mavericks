@@ -88,6 +88,7 @@ export class AppScheduleMeetingPage implements OnInit {
   }
 
   setAvailabeRooms() {
+    this.selectedRoom = {};
     if( this.totalMembers) this.availableRooms = this.floorRooms[this.selectedFloor.value].filter((room: any) => room.maximumCapacity > this.totalMembers)
     else this.availableRooms = [];
   }
