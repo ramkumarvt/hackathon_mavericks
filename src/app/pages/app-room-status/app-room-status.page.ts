@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import scheduleJson from '../../json/schedule-list.json';
+
 @Component({
   selector: 'app-app-room-status',
   templateUrl: './app-room-status.page.html',
@@ -75,16 +77,29 @@ export class AppRoomStatusPage implements OnInit {
 
   selectedFloor: any;
 
+  selectedSegment = 'available';
+
+  availableRooms: any = [];
+
   constructor() { }
 
   ngOnInit() {
     this.selectedFloor = { ...this.dropDownData.at(0) }
+    console.log(scheduleJson, 'scheduleJson')
+    this.availableRooms = scheduleJson.scheduled_list;
   }
 
+
+  segmentChanged({ detail: { value } }: any) {
+    console.log(value);
+    this.selectedSegment = value;
+  }
 
   onFloorChange(event: any) {
     console.log(event);
     this.selectedFloor = { ...event };
   }
+
+
 
 }

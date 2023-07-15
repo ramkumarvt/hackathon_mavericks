@@ -21,18 +21,8 @@
         "floor": "floor2"
     }, {
         "id": 5,
-        "roomName": "V102",
-        "maximumCapacity": 10,
-        "floor": "floor2"
-    }, {
-        "id": 6,
         "roomName": "V202",
         "maximumCapacity": 3,
-        "floor": "floor3"
-    }, {
-        "id": 7,
-        "roomName": "V202",
-        "maximumCapacity": 5,
         "floor": "floor3"
     }]
 }

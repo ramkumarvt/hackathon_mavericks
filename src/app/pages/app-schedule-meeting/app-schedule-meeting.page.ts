@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+import lineItemJson from '../../json/meeting_room_list.json';
+
+import scheduleJson from '../../json/schedule-list.json';
+
+import { v4 as uuidv4 } from 'uuid';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-app-schedule-meeting',
   templateUrl: './app-schedule-meeting.page.html',
@@ -27,33 +34,6 @@ export class AppScheduleMeetingPage implements OnInit {
   }];
 
   floorRooms: any = {
-    floor1: [{
-      id: 1,
-      value: 'V007',
-      maximumCapacity: 5
-    }, {
-      id: 2,
-      value: 'V008',
-      maximumCapacity: 8
-    }],
-    floor2: [{
-      id: 1,
-      value: 'V107',
-      maximumCapacity: 3
-    }, {
-      id: 2,
-      value: 'V108',
-      maximumCapacity: 7
-    }],
-    floor3: [{
-      id: 1,
-      value: 'V307',
-      maximumCapacity: 4
-    }, {
-      id: 2,
-      value: 'V308',
-      maximumCapacity: 2
-    }]
   };
 
   selectedFloor: any = {
@@ -69,9 +49,25 @@ export class AppScheduleMeetingPage implements OnInit {
 
   totalMembers:any = null;
 
-  constructor() { }
+  data: any = {};
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  
+  ionViewWillEnter() {
+    console.log(lineItemJson.meeting_room_list);
+    this.floorRooms = lineItemJson.meeting_room_list.reduce((obj: any, room: any) => {
+      console.log(room);
+      if(obj[room.floor]) obj[room.floor].push(room)
+      else obj[room.floor] = [room]
+      return obj;
+    }, {});
+    console.log(this.floorRooms);
   }
 
   onFloorChange(event: any) {
@@ -93,7 +89,28 @@ export class AppScheduleMeetingPage implements OnInit {
     else this.availableRooms = [];
   }
 
-  scheduleRoom() {
+  onTimeChange(event: any, key: string) {
+    console.log(event, key);
+    this.data[key] = event;
+  }
 
+  scheduleRoom() {
+    // console.log(this.data, this.selectedRoom, this.selectedFloor)
+    const request = {
+      ...this.data,
+      totalMembers: this.totalMembers,
+      ...this.selectedRoom,
+      roomId: this.selectedRoom.id,
+      id: this.getUUID()
+    };
+
+    console.log(scheduleJson.scheduled_list, request)
+    scheduleJson.scheduled_list.push(request);
+    this.router.navigate(['tabs/app-room-status']);
+  }
+
+  getUUID() {
+    return uuidv4();
   }
 }
+

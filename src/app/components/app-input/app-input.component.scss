@@ -5,6 +5,10 @@
   position: relative;
   --placeholder-color: var(--app-quaternary-color);
   padding: 0px 10px !important;
+  border-radius: 5px;
+  height: 40px;
+  min-height: unset !important;
+  margin-top: 8px;
 }
 
 .custom-ion-input::shadow input {

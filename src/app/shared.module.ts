@@ -9,6 +9,7 @@ import { AppModalHeaderComponent } from './components/app-modal-header/app-modal
 import { AppInputComponent } from './components/app-input/app-input.component';
 import { AppDropdownComponent } from './components/app-dropdown/app-dropdown.component';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { AppAccordianListComponent } from './components/app-accordian-list/app-accordian-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
     AppModalHeaderComponent,
     AppInputComponent,
     AppDropdownComponent,
-    AddMeetingRoomComponent
+    AddMeetingRoomComponent,
+    AppAccordianListComponent
   ],
   imports: [
     FormsModule,
@@ -32,7 +34,8 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
     AppModalHeaderComponent,
     AppInputComponent,
     AppDropdownComponent,
-    AddMeetingRoomComponent
+    AddMeetingRoomComponent,
+    AppAccordianListComponent
   ],
   providers: [
   ],
