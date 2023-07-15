@@ -11,6 +11,13 @@
   font-size: var(--app-heading4-font-size);
   color: var(--app-quaternary-color);
 }
+ ion-select {
+  &::part(text) {
+    font-family: var(--app-regular-font);
+    color: var(--app-tertiary-color);
+  }
+ }
+
 
 ion-select {
   padding-left: 10px!important;
