@@ -15,7 +15,7 @@ export class TabsPage {
     },{
       id: 2, tabName: 'Schedule Room', icon: '/assets/icon/bottom-nav/audit.svg', path: '/tabs/app-schedule-meeting', className: ''
     }, {
-      id: 3, tabName: 'Track Room', icon: '/assets/icon/bottom-nav/audit.svg', path: '/tabs/app-room-status', className: ''
+      id: 3, tabName: 'Track Room', icon: '/assets/icon/bottom-nav/settings.svg', path: '/tabs/app-room-status', className: ''
     }
   ];
 

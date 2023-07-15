@@ -2,12 +2,12 @@
     "scheduled_list": [{
         "description": "2",
         "floor": "floor1",
-        "from": "12:00 AM",
+        "from": "8:00 AM",
         "id": "1ccae047-1215-4835-a5c5-8e0a9aaca01d",
         "maximumCapacity": 5,
         "roomId": 1,
         "roomName": "V007",
-        "to": "4:00 AM",
+        "to": "10:00 AM",
         "totalMembers": "2"
     }]
 }

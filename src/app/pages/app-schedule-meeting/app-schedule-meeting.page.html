@@ -65,14 +65,14 @@
           <!-- <ion-datetime presentation="time"></ion-datetime>
           -->
           <input class="date" [ngxTimepicker]="from">
-          <ngx-material-timepicker #from (timeSet)="onTimeChange($event, 'from')"></ngx-material-timepicker>
+          <ngx-material-timepicker [format]="24" #from (timeSet)="onTimeChange($event, 'from')"></ngx-material-timepicker>
           
         </ion-col>
 
         <ion-col class="v-align-right" size="6">
           <ion-label>To</ion-label>
           <input class="date" [ngxTimepicker]="to">
-          <ngx-material-timepicker #to (timeSet)="onTimeChange($event, 'to')"></ngx-material-timepicker>
+          <ngx-material-timepicker [format]="24" #to (timeSet)="onTimeChange($event, 'to')"></ngx-material-timepicker>
           <!-- <ion-datetime presentation="time" [preferWheel]="true"></ion-datetime> -->
         </ion-col>
       </ion-row>

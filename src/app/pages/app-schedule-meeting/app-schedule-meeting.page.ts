@@ -85,7 +85,7 @@ export class AppScheduleMeetingPage implements OnInit {
 
   setAvailabeRooms() {
     this.selectedRoom = {};
-    if( this.totalMembers) this.availableRooms = this.floorRooms[this.selectedFloor.value].filter((room: any) => room.maximumCapacity > this.totalMembers)
+    if( this.totalMembers) this.availableRooms = this.floorRooms[this.selectedFloor.value].filter((room: any) => room.maximumCapacity >= this.totalMembers)
     else this.availableRooms = [];
   }
 
@@ -103,9 +103,8 @@ export class AppScheduleMeetingPage implements OnInit {
       roomId: this.selectedRoom.id,
       id: this.getUUID()
     };
-
-    console.log(scheduleJson.scheduled_list, request)
     scheduleJson.scheduled_list.push(request);
+    console.log(scheduleJson.scheduled_list, request)
     this.router.navigate(['tabs/app-room-status']);
   }
 

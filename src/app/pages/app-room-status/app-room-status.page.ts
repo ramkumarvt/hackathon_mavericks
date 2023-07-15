@@ -79,14 +79,33 @@ export class AppRoomStatusPage implements OnInit {
 
   selectedSegment = 'available';
 
+  allRooms: any;
+
   availableRooms: any = [];
+
+  liveRooms: any = [];
+
+  liveLoad: any;
 
   constructor() { }
 
   ngOnInit() {
     this.selectedFloor = { ...this.dropDownData.at(0) }
-    console.log(scheduleJson, 'scheduleJson')
-    this.availableRooms = scheduleJson.scheduled_list;
+    // this.availableRooms = scheduleJson.scheduled_list;
+    this.allRooms = scheduleJson.scheduled_list;
+    console.log(this.allRooms);
+    this.filterLiveRooms();
+  }
+
+  ionViewWillEnter() {
+    this.filterLiveRooms();
+    this.liveLoad = setInterval(() => {
+      this.filterLiveRooms(); 
+    }, 10000);
+  }
+
+  ionViewWillLeave() {
+    clearInterval(this.liveLoad);
   }
 
 
@@ -100,6 +119,19 @@ export class AppRoomStatusPage implements OnInit {
     this.selectedFloor = { ...event };
   }
 
-
-
+  filterLiveRooms() {
+    const { availableRooms, occupiedRooms } = this.allRooms.reduce((obj: any, room: any) => {
+      var time = new Date();
+      const timeNow = time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+'2:44 PM';
+      if(timeNow >= room.from && timeNow < room.to) obj.occupiedRooms.push(room);
+      else obj.availableRooms.push(room);
+      return obj;
+    }, {
+      availableRooms: [],
+      occupiedRooms: []
+    });
+    this.availableRooms = [...availableRooms];
+    this.liveRooms = [...occupiedRooms];
+  }
 }

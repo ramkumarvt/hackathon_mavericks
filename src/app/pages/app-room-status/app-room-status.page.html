@@ -24,7 +24,7 @@
           <ion-card class="card-history" (click)="room.isOpened = !room.isOpened">
             <ion-grid>
               <ion-row>
-                <ion-col size="8" class="left-text">{{ room.roomName  }}</ion-col>
+                <ion-col size="8" class="left-text">{{ room.roomName  }} - {{ room.description }}</ion-col>
                 <ion-col class="v-align-right" size="4">
                   <!-- <ion-text class="right-text width-90"> {{ auditHistory.project }} </ion-text> -->
                   <ion-icon class="icon-accordian" [name]="room.isOpened ? 'remove-circle-outline' : 'add-circle-outline'"></ion-icon>
@@ -41,40 +41,64 @@
                   <ion-col size="7" class="right-text">{{ room.roomName }}</ion-col>
                 </ion-row>
                 <ion-row>
-                  <ion-col size="5" class="left-text">From</ion-col>
-                  <ion-col size="7" class="right-text">{{ room.from }}</ion-col>
+                  <ion-col size="5" class="left-text">Meeting Duration</ion-col>
+                  <ion-col size="7" class="right-text">{{ room.from }} - {{ room.to }}</ion-col>
                 </ion-row>
-                <ion-row>
+                <!-- <ion-row>
                   <ion-col size="5" class="left-text">To</ion-col>
                   <ion-col size="7" class="right-text">{{ room.to }}</ion-col>
-                </ion-row>
+                </ion-row> -->
                 <ion-row>
                   <ion-col size="5" class="left-text">Total Members</ion-col>
                   <ion-col size="7" class="right-text">{{ room.totalMembers }}</ion-col>
                 </ion-row>
-                <ion-row>
+                <!-- <ion-row>
                   <ion-col size="5" class="left-text">Agenda</ion-col>
                   <ion-col size="7" class="right-text">{{ room.description }}</ion-col>
+                </ion-row> -->
+              </app-accordian-list>
+            </ion-grid>
+          </ion-card>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="selectedSegment === 'live'">
+      <!-- <p>Live</p> -->
+      <ng-container *ngIf="liveRooms?.length">
+        <ng-container *ngFor="let room of liveRooms;">
+          <ion-card class="card-history" (click)="room.isOpened = !room.isOpened">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="8" class="left-text">{{ room.roomName  }} - {{ room.description }}</ion-col>
+                <ion-col class="v-align-right" size="4">
+                  <!-- <ion-text class="right-text width-90"> {{ auditHistory.project }} </ion-text> -->
+                  <ion-icon class="icon-accordian" [name]="room.isOpened ? 'remove-circle-outline' : 'add-circle-outline'"></ion-icon>
+                </ion-col>
+              </ion-row>
+
+              <app-accordian-list [expanded]="room.isOpened">
+                <ion-row>
+                  <ion-col size="5" class="left-text">Floor</ion-col>
+                  <ion-col size="7" class="right-text">{{ room.floor }} </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="5" class="left-text">Room</ion-col>
+                  <ion-col size="7" class="right-text">{{ room.roomName }}</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="5" class="left-text">Meeting Duration</ion-col>
+                  <ion-col size="7" class="right-text">{{ room.from }} - {{ room.to }}</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="5" class="left-text">Total Members</ion-col>
+                  <ion-col size="7" class="right-text">{{ room.totalMembers }}</ion-col>
                 </ion-row>
               </app-accordian-list>
             </ion-grid>
           </ion-card>
         </ng-container>
       </ng-container>
-      <!-- <ion-row>
-        <ion-col size="4">
-          <app-dropdown [data]="dropDownData" (ngDropdownValueChange)="onFloorChange($event)" resetFilter="false" defaultValue="floor1"></app-dropdown>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="4">
-          <app-dropdown [data]="roomData[selectedFloor.value]" (ngDropdownValueChange)="onFloorChange($event)" resetFilter="false" defaultValue="vt01"></app-dropdown>
-        </ion-col>
-      </ion-row> -->
-    </ng-container>
-
-    <ng-container *ngIf="selectedSegment === 'live'">
-      <p>Live</p>
     </ng-container>
   </ion-grid>
 </ion-content>

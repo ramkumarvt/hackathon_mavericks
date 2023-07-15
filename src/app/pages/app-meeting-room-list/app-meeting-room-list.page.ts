@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import lineItemJson from '../../json/meeting_room_list.json';
 import { AddMeetingRoomComponent } from 'src/app/components/add-meeting-room/add-meeting-room.component';
 import { v4 as uuidv4 } from 'uuid';
+import { MeetingService } from 'src/app/service/meeting.service';
 
 @Component({
   selector: 'app-app-meeting-room-list',
@@ -14,11 +15,13 @@ export class AppMeetingRoomListPage implements OnInit {
   roomLists: any = lineItemJson.meeting_room_list ?? [];
 
   constructor(
-    private modalControl: ModalController
+    private modalControl: ModalController,
+    private meetingService: MeetingService
   ) { }
 
   ngOnInit() {
     console.log(lineItemJson);
+    // this.meetingService.getRooms();
     this.roomLists =  lineItemJson.meeting_room_list;
   }
 
