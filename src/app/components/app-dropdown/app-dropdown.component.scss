@@ -2,6 +2,9 @@
   background-color: var(--app-secondary-color);
   border: 1px solid var(--app-senary-color);
   border-radius: 5px;
+  height: 35px;
+  display: flex;
+  align-items: center;
   // padding: 5px 0;
 }
 .label-text{
@@ -12,7 +15,22 @@
 ion-select {
   padding-left: 10px!important;
   font-family: var(--app-regular-font); 
+
+  // .native-wrapper {
+  //   width: 100%;
+  //   margin-right: 8px;
+  // }
 }
+
+ion-select::part(icon) {
+  // width: 100%;
+  margin-right: 8px;
+}
+
+ion-select::part(container) {
+  width: 100%;
+}
+
 ::ng-deep .select-parent-container .select-interface-option {
   padding-inline-end: 20px !important;
   ion-label {

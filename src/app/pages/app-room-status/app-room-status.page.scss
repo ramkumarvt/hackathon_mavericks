@@ -2,3 +2,24 @@ ion-content {
     --background: var(--app-quinary-color) !important;
     height: 100%;
 }   
+
+.icon-accordian {
+    font-size: 25px;
+    position: absolute;
+    right: 4px;
+    top: 1px;
+    color: var(--app-primary-color);
+}
+
+.card-history {
+    margin: 10px 5px;
+}
+
+.left-text {
+    color: var(--app-primary-color) !important;
+    font-family: var(--app-medium-font);
+}
+
+.right-text {
+    font-family: var(--app-medium-font);
+}

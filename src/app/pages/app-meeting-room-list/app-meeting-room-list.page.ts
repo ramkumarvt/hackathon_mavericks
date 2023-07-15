@@ -45,7 +45,7 @@ export class AppMeetingRoomListPage implements OnInit {
             ...data
           };
           console.log(room);
-          this.roomLists.push(data);
+          lineItemJson.meeting_room_list.push(data);
         }
       })
     } catch(error) {
