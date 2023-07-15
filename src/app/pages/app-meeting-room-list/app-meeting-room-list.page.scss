@@ -7,10 +7,6 @@ ion-content {
     margin-bottom: 10px;
 }
 
-ion-list {
-    background: transparent;
-}
-
 .room-list-card {
     padding: 10px;
     border-radius: 5px;
@@ -21,6 +17,11 @@ ion-list {
         background-color: var(--app-quinary-clr);
     }
 }
+
+ion-list {
+    background: transparent;
+}
+
 .row-alignment {
     display: flex;
     align-items: center;
