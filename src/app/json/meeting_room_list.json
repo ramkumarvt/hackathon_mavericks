@@ -1,0 +1,38 @@
+{
+    "meeting_room_list": [{
+      "id": 1,
+      "roomName": "V007",
+      "maximumCapacity": 5,
+      "floor": "floor1"
+    }, {
+        "id": 2,
+        "roomName": "V008",
+        "maximumCapacity": 2,
+        "floor": "floor1"
+    }, {
+        "id": 3,
+        "roomName": "V100",
+        "maximumCapacity": 4,
+        "floor": "floor2"
+    }, {
+        "id": 4,
+        "roomName": "V101",
+        "maximumCapacity": 2,
+        "floor": "floor2"
+    }, {
+        "id": 5,
+        "roomName": "V102",
+        "maximumCapacity": 10,
+        "floor": "floor2"
+    }, {
+        "id": 6,
+        "roomName": "V202",
+        "maximumCapacity": 3,
+        "floor": "floor3"
+    }, {
+        "id": 7,
+        "roomName": "V202",
+        "maximumCapacity": 5,
+        "floor": "floor3"
+    }]
+}

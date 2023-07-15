@@ -1,0 +1,36 @@
+ion-content {
+    --background: var(--app-quinary-color) !important;
+    height: 100%;
+}
+
+.room-list-container:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+ion-list {
+    background: transparent;
+}
+
+.room-list-card {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+    color: var(--app-quaternary-clr);
+
+    .expiring-data {
+        background-color: var(--app-quinary-clr);
+    }
+}
+.row-alignment {
+    display: flex;
+    align-items: center;
+}
+.col-alignment {
+    justify-content: flex-end;
+}
+.text {
+    text-align: right;
+}
+.set-font {
+    font-size: var(--app-heading3-font-size);
+}
