@@ -64,3 +64,8 @@ ion-card {
 .pb-10  {
     padding-bottom: 10px;
 }
+
+ion-label, ion-text {
+    font-family: var(--app-semi-bold-font);
+    color: var(--app-tertiary-color);
+}
